@@ -19,4 +19,5 @@ doubleSmallNumber x = if x > 100
                         then x
                         else doubleMe x
 ```
-if-statements are expressions and return values.
+if-statements are expressions and return values. The else statement is _mandatory_, so every if-statement will
+return something.
