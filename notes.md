@@ -13,3 +13,10 @@ Changing between infix and prefix notation.
 succ (succ 10)
 ```
 Returns 12.
+
+```haskell
+doubleSmallNumber x = if x > 100
+                        then x
+                        else doubleMe x
+```
+if-statements are expressions and return values.
