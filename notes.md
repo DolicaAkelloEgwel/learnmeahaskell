@@ -8,3 +8,8 @@ min 1 2
 1 `min` 2
 ```
 Changing between infix and prefix notation.
+
+```haskell
+succ (succ 10)
+```
+Returns 12.
