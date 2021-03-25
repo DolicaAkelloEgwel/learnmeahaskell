@@ -6,3 +6,6 @@ ld n = ldf 2 n
 prime n | n < 1 = error "not a positive integer"
         | n == 1 = False
         | otherwise = ld n == n
+
+-- Type declarations
+is_even = divides 2
