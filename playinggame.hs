@@ -4,5 +4,5 @@ maxInt [x] = x
 maxInt (x:xs) = max x (maxInt xs)
 
 removeItem _ []                 = []
-removeItem x (y:ys) | x == y    = removeItem x ys
+removeItem x (y:ys) | x == y    = ys
                     | otherwise = y : removeItem x ys
