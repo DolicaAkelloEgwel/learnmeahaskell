@@ -3,6 +3,6 @@ maxInt [] = error "empty list"
 maxInt [x] = x
 maxInt (x:xs) = max x (maxInt xs)
 
-removeItem _ []                 = []
-removeItem x (y:ys) | x == y    = ys
-                    | otherwise = y : removeItem x ys
+removeFirst _ []                 = []
+removeFirst x (y:ys) | x == y    = ys
+                    | otherwise = y : removeFirst x ys
