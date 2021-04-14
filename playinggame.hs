@@ -5,4 +5,4 @@ maxInt (x:xs) = max x (maxInt xs)
 
 removeFirst _ []                 = []
 removeFirst x (y:ys) | x == y    = ys
-                    | otherwise = y : removeFirst x ys
+                     | otherwise = y : removeFirst x ys
