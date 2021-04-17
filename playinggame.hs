@@ -14,4 +14,4 @@ removeFirst x (y:ys) | x == y    = ys
 
 srtInts :: [Int] -> [Int]
 srtInts [] = []
-srtInts xs = m : (removeFirst m (srtInts m xs)) where m = mnmInt xs
+srtInts xs = m : (srtInts (removeFirst m xs)) where m = minInt xs
