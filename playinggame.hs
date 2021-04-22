@@ -15,3 +15,7 @@ removeFirst x (y:ys) | x == y    = ys
 srtInts :: [Int] -> [Int]
 srtInts [] = []
 srtInts xs = m : (srtInts (removeFirst m xs)) where m = minInt xs
+
+average :: [Int] -> Rational
+average [] = error "empty list"
+average xs = toRational (sum xs) / toRational (length xs)
