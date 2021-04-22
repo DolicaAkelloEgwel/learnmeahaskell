@@ -19,3 +19,8 @@ srtInts xs = m : (srtInts (removeFirst m xs)) where m = minInt xs
 average :: [Int] -> Rational
 average [] = error "empty list"
 average xs = toRational (sum xs) / toRational (length xs)
+
+count :: Char -> String -> Int
+count _ []                 = 0
+count x (y:ys) | x == y    = 1 + count x ys
+               | otherwise = count x ys
