@@ -26,12 +26,12 @@ count x (y:ys) | x == y    = 1 + count x ys
                | otherwise = count x ys
 
 repeatChar :: Int -> Char -> String
-repeatChar 1 c = [c]
-repeatChar x c = [c] ++ repeatChar (x - 1) c
+repeatChar 1 x = [x]
+repeatChar n x = [x] ++ repeatChar (n - 1) x
 
 traverseString :: Int -> String -> String
-traverseString y [x] = repeatChar y x
-traverseString y (x:xs) = repeatChar y x ++ traverseString (y + 1) xs 
+traverseString n [x] = repeatChar n x
+traverseString n (x:xs) = repeatChar n x ++ traverseString (n + 1) xs 
 
 blowup :: String -> String
 blowup x = traverseString 1 x
