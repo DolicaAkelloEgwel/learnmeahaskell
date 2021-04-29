@@ -25,6 +25,10 @@ count _ []                 = 0
 count x (y:ys) | x == y    = 1 + count x ys
                | otherwise = count x ys
 
+repeatChar :: Int -> Char -> String
+repeatChar 1 c = [c]
+repeatChar x c = [c] ++ repeatChar (x - 1) c
+
 blowup :: String -> String
 blowup [x] = [x] ++ [x]
 blowup (x:xs) = [x] ++ blowup xs
