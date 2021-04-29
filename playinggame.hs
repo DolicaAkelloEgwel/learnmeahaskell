@@ -29,6 +29,9 @@ repeatChar :: Int -> Char -> String
 repeatChar 1 c = [c]
 repeatChar x c = [c] ++ repeatChar (x - 1) c
 
+traverseString :: Int -> String -> String
+traverseString y [x] = repeatChar y x
+traverseString y (x:xs) = repeatChar y x ++ traverseString (y + 1) xs 
+
 blowup :: String -> String
-blowup [x] = [x] ++ [x]
-blowup (x:xs) = [x] ++ blowup xs
+blowup x = traverseString 1 x
