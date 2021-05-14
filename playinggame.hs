@@ -45,4 +45,4 @@ blowup x = traverseString 1 x
 
 sortString :: String -> String
 sortString [] = []
-sortString xs = [maximum xs] ++ sortString (removeFirst (maximum xs) xs)
+sortString xs = [minimum xs] ++ sortString (removeFirst (minimum xs) xs)
