@@ -47,4 +47,4 @@ blowup x = traverseString 1 x
 -- function that sorts a string in alphabetical order
 sortString :: String -> String
 sortString [] = []
-sortString xs = minimum xs : sortString (removeFirst (minimum xs) xs)
+sortString xs = min_letter : sortString (removeFirst min_letter xs) where min_letter = minimum xs
