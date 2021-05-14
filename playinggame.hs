@@ -43,6 +43,8 @@ traverseString n (x:xs) = repeatChar n x ++ traverseString (n + 1) xs
 blowup :: String -> String
 blowup x = traverseString 1 x
 
+-- Exercise 1.15
+-- function that sorts a string in alphabetical order
 sortString :: String -> String
 sortString [] = []
 sortString xs = minimum xs : sortString (removeFirst (minimum xs) xs)
