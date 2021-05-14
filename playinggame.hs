@@ -42,3 +42,7 @@ traverseString n (x:xs) = repeatChar n x ++ traverseString (n + 1) xs
 
 blowup :: String -> String
 blowup x = traverseString 1 x
+
+sortString :: String -> String
+sortString [] = []
+sortString xs = [maximum xs] ++ sortString (removeFirst (maximum xs) xs)
