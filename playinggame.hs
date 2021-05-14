@@ -34,7 +34,7 @@ count x (y:ys) | x == y    = 1 + count x ys
 -- Exercise 1.14
 repeatChar :: Int -> Char -> String
 repeatChar 1 x = [x]
-repeatChar n x = [x] ++ repeatChar (n - 1) x
+repeatChar n x = x : repeatChar (n - 1) x
 
 traverseString :: Int -> String -> String
 traverseString n [x] = repeatChar n x
@@ -45,4 +45,4 @@ blowup x = traverseString 1 x
 
 sortString :: String -> String
 sortString [] = []
-sortString xs = [minimum xs] ++ sortString (removeFirst (minimum xs) xs)
+sortString xs = minimum xs : sortString (removeFirst (minimum xs) xs)
