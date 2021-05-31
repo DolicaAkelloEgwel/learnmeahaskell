@@ -48,3 +48,7 @@ blowup x = traverseString 1 x
 sortString :: String -> String
 sortString [] = []
 sortString xs = min_letter : sortString (removeFirst min_letter xs) where min_letter = minimum xs
+
+sortStrings :: [String] -> [String]
+sortStrings [] = []
+sortStrings xs = min_word : sortStrings (removeFirst min_word xs) where min_word = minimum xs
