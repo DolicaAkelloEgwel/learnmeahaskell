@@ -52,3 +52,14 @@ sortString xs = min_letter : sortString (removeFirst min_letter xs) where min_le
 sortStrings :: [String] -> [String]
 sortStrings [] = []
 sortStrings xs = min_word : sortStrings (removeFirst min_word xs) where min_word = minimum xs
+
+-- Example 1.16
+prefix :: String -> String -> Bool
+prefix [] ys = True
+prefix (x:xs) [] = False
+prefix (x:xs) (y:ys) = (x==y) && prefix xs ys
+
+-- Exercise 1.17
+substring :: String -> String -> Bool
+substring xs [] = False
+substring xs (y:ys) = prefix xs (y:ys) || substring xs ys
