@@ -74,3 +74,7 @@ mymap f (x:xs) = (f x) : (mymap f xs)
 lengths :: [[a]] -> [Int]
 lengths [] = []
 lengths (x:xs) = length x : lengths xs
+
+-- Actually using map this time
+maplengths :: [[a]] -> [Int]
+maplengths = map length  
