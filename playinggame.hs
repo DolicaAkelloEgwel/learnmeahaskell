@@ -69,3 +69,8 @@ substring xs (y:ys) = prefix xs (y:ys) || substring xs ys
 mymap :: (a -> b) -> [a] -> [b]
 mymap f [] = []
 mymap f (x:xs) = (f x) : (mymap f xs)
+
+-- Exercise 1.20
+lengths :: [[a]] -> [Int]
+lengths [] = []
+lengths (x:xs) = length x : lengths xs
