@@ -65,7 +65,7 @@ substring :: String -> String -> Bool
 substring xs [] = False
 substring xs (y:ys) = prefix xs (y:ys) || substring xs ys
 
-factors :: Integer -> [Integer]
-factors n | n < 1     = error "Argument not positive"
-          | n == 1    = []
-          | otherwise = p : factors (div n p) where p = ld n
+-- What map does
+mymap :: (a -> b) -> [a] -> [b]
+mymap f [] = []
+mymap f (x:xs) = (f x) : (mymap f xs)
