@@ -78,3 +78,7 @@ lengths (x:xs) = length x : lengths xs
 -- Actually using map this time
 maplengths :: [[a]] -> [Int]
 maplengths = map length  
+
+-- Exercise 1.21
+sumLengths :: [[a]] -> Int
+sumLengths xs = sum (map length xs)
