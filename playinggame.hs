@@ -81,4 +81,4 @@ maplengths = map length
 
 -- Exercise 1.21
 sumLengths :: [[a]] -> Int
-sumLengths xs = sum (map length xs)
+sumLengths xs = sum (maplengths xs)
