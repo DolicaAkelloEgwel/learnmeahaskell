@@ -61,7 +61,7 @@ ldpf (p:ps) n | rem n p == 0 = p
               | otherwise    = ldpf ps n
 
 primes1 :: [Integer]
-primes1 = 2 : filter prime [3..]
+primes1 = 2 : filter prime [3..] -- This is a "lazy list" because only the first part is computed
 
 prime :: Integer -> Bool
 prime n | n < 1     = error "not a positive integer"
@@ -84,10 +84,4 @@ h1 x = 2 * (h1 x)
 h2 :: Integer -> Integer 
 h2 0 = 0
 h2 x = h2 (x+1) 
-
--- Generating a list of prime factors
-factors :: Integer -> [Integer]
-factors n | n < 1     = error "Argument not positive"
-          | n == 1    = []
-          | otherwise = p : factors (div n p) where p = ld n
 
