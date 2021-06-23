@@ -83,6 +83,6 @@ maplengths = map length
 sumLengths :: [[a]] -> Int
 sumLengths xs = sum (maplengths xs)
 
-
+-- 1.9 Equational Reasoning
 f :: Integer -> Integer -> Integer
-f x y = x^2 + y^2
+f x y = x^2 + y^2 -- In Haskell, x = x * 2 would lead to an error: "x" multiply defined
