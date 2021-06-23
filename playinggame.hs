@@ -82,3 +82,7 @@ maplengths = map length
 -- Exercise 1.21
 sumLengths :: [[a]] -> Int
 sumLengths xs = sum (maplengths xs)
+
+
+f :: Integer -> Integer -> Integer
+f x y = x^2 + y^2
