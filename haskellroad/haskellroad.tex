@@ -1,4 +1,7 @@
 \documentclass[11pt]{article}
+\usepackage{amssymb}
+
+
     \title{\textbf{The Haskell Road to Logic, Maths, and Programming - Exercises \& Notes}}
     \author{}
     \date{}
@@ -25,7 +28,7 @@
 \subsubsection*{Negation Truth Table}
 \begin{tabular}{|l|l|l|}
 \hline
-	P & $\neg$P\\
+	\textbf{P} & $\neg$\textbf{P}\\
 \hline
 	t & f\\
 \hline
@@ -35,7 +38,7 @@
 \subsubsection*{Conjunction Truth Table}
 \begin{tabular}{|l|l|l|}
 \hline
-	P & Q & P $\land$ Q\\
+	\textbf{P} & \textbf{Q} & \textbf{P} $\land$ \textbf{Q}\\
 \hline
 	t & t & t\\
 \hline
@@ -47,6 +50,35 @@
 \hline
 \end{tabular}
 
+\subsubsection*{Inclusive Or Truth Table}
+\begin{tabular}{|l|l|l|}
+\hline
+	\textbf{P} & \textbf{Q} & \textbf{P} $\lor$ \textbf{Q}\\
+\hline
+	t & t & t\\
+\hline
+	t & f & t\\
+\hline
+	f & t & t\\
+\hline
+	f & f & f\\
+\hline
+\end{tabular}
+
+\subsubsection*{Exclusive Or Truth Table}
+\begin{tabular}{|l|l|l|}
+\hline
+	\textbf{P} & \textbf{Q} & \textbf{P} $\veebar$ \textbf{Q}\\
+\hline
+	t & t & f\\
+\hline
+	t & f & t\\
+\hline
+	f & t & t\\
+\hline
+	f & f & f\\
+\hline
+\end{tabular}
 
 \end{document}
 
