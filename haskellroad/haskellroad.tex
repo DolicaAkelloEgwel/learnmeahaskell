@@ -102,5 +102,25 @@ P is the \textit{antecendent} of the implication and Q is the \textit{consequent
 \item both antecedent and consequent are true ($n=6$).
 \end{itemize}
 The implication is false when the antecedent is true and the consequent is false. 
+
+Implication in Haskell:
+\begin{verbatim}
+infix 1 ==>
+
+(==>) :: Bool -> Bool -> Bool
+x ==> y = (not x) || y
+\end{verbatim}
+
+The implication is false when $x \land \lnot y$, so the opposite of this is $\lnot x \lor y$. The \texttt{1} sets the binding power or precedence of the operation.
+
+A decleration of an infix operator together with an indication of its binding power is called a \textit{fixity operation}.
+
+It is also possible to give a direct definition:
+\begin{verbatim}
+(==>) :: Bool -> Bool -> Bool
+True  ==> x = x
+False ==> x = True
+\end{verbatim}
+
 \end{document}
 
