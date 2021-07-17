@@ -115,12 +115,17 @@ The implication is false when $x \land \lnot y$, so the opposite of this is $\ln
 
 A decleration of an infix operator together with an indication of its binding power is called a \textit{fixity operation}.
 
-It is also possible to give a direct definition:
+It is also possible to give a \textbf{direct} definition:
 \begin{verbatim}
 (==>) :: Bool -> Bool -> Bool
 True  ==> x = x
 False ==> x = True
 \end{verbatim}
+
+\paragraph{Trivially True Implications.} Implications with the antecedent false and the consequent true are true regardless of the parameters. These are dubbed \textit{trivially true} implications.
+
+My name is Napolean $\Rightarrow$ the decimal expansion of $\pi$ contains the sequence 7777777. \newline
+The decimal expansion of $\pi$ contains 7777777 $\Rightarrow$ Strawberries are red
 
 \end{document}
 
