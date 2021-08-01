@@ -160,5 +160,12 @@ The expression $P \iff Q$ is called the \textit{equivalence} of $P$ and $Q$. $P$
 \hline
 \end{tabular}
 
+The truth table for exclusive or is the same as the one for $\lnot (P \iff Q)$. So we can use the code below for the Haskell implementation of the function \texttt{<+>} (exclusive or).
+
+\begin{verbatim}
+(<+>) :: Bool -> Bool -> Bool
+x (<+>) y = x /= y
+\end{verbatim}
+
 \end{document}
 
