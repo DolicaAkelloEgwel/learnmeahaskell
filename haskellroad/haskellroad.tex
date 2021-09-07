@@ -173,7 +173,7 @@ $$\lnot \land ((P \Rightarrow Q) \iff \lnot (Q \land \lnot P)).$$
 \begin{verbatim}
 p = True
 q = False
-formula1 = (not p) && (p ==> q) <=> not (q && (not p)
+formula1 = (not p) && (p ==> q) <=> not (q && (not p))
 \end{verbatim}
 
 Loading the formula:
@@ -186,6 +186,14 @@ False
 
 \textbf{Logical validities} are propositonal formulas that receive the value $t$ no matter what the value of the "arguments." Examples of logical validites are: $P \Rightarrow P, P \lor \lnot P, P \Rightarrow (Q \Rightarrow P)$.
 If an expression contains $n$ letters then there are $2^n$ possible distributions of the truth values between these letters. If all calculated values are equal to $t$ then the expression, by definition, is a validity.
+
+A propositional/Boolean/truth function can be used to check the validity of a propositon given different arguments. 
+
+\begin{verbatim}
+formula2 p q = ((not p) && (p ==> q) <=> not (q && (not p)))
+\end{verbatim}
+
+This has the type \texttt{Bool -> Bool -> Bool} whereas \texttt{formula1} is simply \texttt{Bool}.
 
 \end{document}
 
