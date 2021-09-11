@@ -195,7 +195,7 @@ formula2 p q = ((not p) && (p ==> q) <=> not (q && (not p)))
 
 This has the type \texttt{Bool -> Bool -> Bool} whereas \texttt{formula1} is simply \texttt{Bool}.
 
-Truth table function for single argument:
+Validity check for proposition with a single argument:
 \begin{verbatim}
 valid1 :: (Bool -> Bool) -> Bool
 valid1 bf :: (bf True) && (bf False)
@@ -207,6 +207,27 @@ This gives the output
 \begin{verbatim}
 TAMO> valid1 excluded_middle
 True
+\end{verbatim}
+
+Validity check for proposition with two arguments:
+\begin{verbatim}
+valid1 :: (Bool -> Bool -> Bool) -> Bool
+valid1 bf =    (bf True True) 
+            && (bf True False)
+            && (bf False True)
+            && (bf False False)
+            
+form1 p q = p ==> (q ==> p)
+form1 p q = (p ==> q) ==> p
+\end{verbatim}
+This gives the output
+\begin{verbatim}
+TAMO> valid2 form1
+True
+TAMO> valid2 form2
+False
+TAMO> valid2 formula2
+False
 \end{verbatim}
 
 \end{document}
