@@ -230,5 +230,20 @@ TAMO> valid2 formula2
 False
 \end{verbatim}
 
+Haskell trick for validity check with 3 or more arguments:
+\begin{verbatim}
+valid3 :: (Bool -> Bool -> Bool -> Bool) -> Bool
+valid3 bf = and [bf p q r | p <- [True, False],
+                            q <- [True, False],
+                            r <- [True, False]]
+                            
+                            
+valid4 :: (Bool -> Bool -> Bool -> Bool -> Bool) -> Bool
+valid4 bf = and [bf p q r s | p <- [True, False],
+                              q <- [True, False],
+                              r <- [True, False],
+                              s <- [True, False]]
+\end{verbatim}
+
 \end{document}
 
