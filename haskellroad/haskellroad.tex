@@ -230,7 +230,7 @@ TAMO> valid2 formula2
 False
 \end{verbatim}
 
-Haskell trick for validity check with 3 or more arguments:
+Haskell trick for validity check with 3 or more arguments using \textbf{list comprehensions}:
 \begin{verbatim}
 valid3 :: (Bool -> Bool -> Bool -> Bool) -> Bool
 valid3 bf = and [bf p q r | p <- [True, False],
