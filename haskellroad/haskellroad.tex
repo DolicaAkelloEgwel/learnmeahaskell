@@ -272,5 +272,11 @@ The notation $\equiv$ shows that two formulas are equivalent. $\lnot (P \land Q)
 
 $(P \oplus Q) \oplus Q$ is equivalent to $P$ and $(P \oplus Q) \oplus Q \iff P$ is a logical validity.
 
+Testing logical equivalence in Haskell:
+\begin{verbatim}
+logEquiv1 :: (Bool -> Bool) -> (Bool -> Bool) -> Bool
+logEquiv1 bf1 bf2 = (bf1 True <=> bf2 True) && (bf1 False <=> bf2 False)
+\end{verbatim}
+
 \end{document}
 
