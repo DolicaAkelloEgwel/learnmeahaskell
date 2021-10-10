@@ -283,6 +283,10 @@ logEquiv2 bf1 bf2 = and [(bf1 p q) <=> (bf2 p q) | p <- [True, False],
 \end{verbatim}
 
 \paragraph{Law of double negation} $P \equiv \lnot \lnot P$
+\paragraph{Law of idempotence} $P \land P \equiv P$; $P \lor P \equiv P$
+\paragraph{Laws of contraposition} $(\lnot P \Rightarrow \lnot Q) \equiv (Q \Rightarrow P)$\\
+$(\lnot P \Rightarrow Q) \equiv (\lnot Q \Rightarrow P)$ \\
+$(\lnot Q \Rightarrow P) \equiv (\lnot P \Rightarrow Q)$ 
 
 \end{document}
 
